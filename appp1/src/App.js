@@ -1,21 +1,41 @@
 import React, { useState } from "react";
-import logo from './logo.svg';
 import './App.css';
-import { Login } from "./Login.jsx";
-import { Register } from "./Register.jsx";
+import { useNavigate } from "react-router-dom";
+import { Login } from "./components/Login.jsx";
+import { HomeScreen } from "./components/HomeScreen";
+import { Routes, Route } from 'react-router-dom';
+import { createContext } from "react";
+import { Grafik } from "./components/Grafik";
+import { Urlopy } from "./components/Urlopy";
+import { Zwolnienia } from "./components/Zwolnienia";
+
+export const ThemeContext = createContext(null);
 
 function App() {
-  const [currentForm, setCurrentForm] = useState('login');
-
-  const toggleForm = (formName) => {
-    setCurrentForm(formName);
+  const navigate = useNavigate()
+  const[theme, setTheme] = useState("dark")
+  const toggleTheme = () => {
+    setTheme((curr) => (curr === "light" ? "dark": "light"));
   }
+
   return (
-    <div className="App">
-      {
-        currentForm === "login" ? <Login onFormSwitch={toggleForm}/> : <Register onFormSwitch={toggleForm}/>
-      }
-    </div>
+    
+    <ThemeContext.Provider value={{theme, toggleTheme}}>
+    <div className="App" id={theme}>
+      <Routes>
+        <Route path="/" element={<Login />} /> 
+        <Route path="/home" element={< HomeScreen />} />
+        <Route path="/grafik" element={< Grafik />} />
+        <Route path="/urlopy" element={< Urlopy />} />
+        <Route path="/zwolnienia" element={<Zwolnienia />} />
+      </Routes>
+      
+      <button className="switch-mode-btn" onClick={toggleTheme} checked={theme === "dark"}>Switch color mode</button>
+      
+      </div>
+      
+    </ThemeContext.Provider>
+    
   );
 }
 
