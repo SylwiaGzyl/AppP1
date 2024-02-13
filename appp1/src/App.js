@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import './App.css';
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Routes, Route } from "react-router-dom";
 import { Login } from "./components/Login.jsx";
-import { HomeScreen } from "./components/HomeScreen";
-import { Routes, Route } from 'react-router-dom';
+import { HomeScreen } from "./components/HomeScreen.jsx";
+import { Help } from "./components/Help.jsx";
+import { Settings } from "./components/Settings.jsx";
+import { Profile } from "./components/Profile.jsx";
 import { createContext } from "react";
 
 
@@ -23,8 +25,11 @@ function App() {
       <Routes>
         <Route path="/" element={<Login />} /> 
         <Route path="/home" element={< HomeScreen />} />
+        <Route path="/profile" element={< Profile />} />
+        <Route path="/help" element={< Help />} />
+        <Route path="/settings" element={< Settings />} />
       </Routes>  
-      <button className="switch-mode-btn" onClick={toggleTheme} checked={theme === "dark"}>Switch color mode</button>
+      <button className="switch-mode-btn" onClick={toggleTheme} checked={theme === "dark"}></button> 
       
       </div>
       
