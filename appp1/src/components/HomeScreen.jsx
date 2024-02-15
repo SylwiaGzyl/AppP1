@@ -11,26 +11,6 @@ export const HomeScreen = (props) => {
 
     const navigate = useNavigate();
 
-    /*document.addEventListener('DOMContentLoaded', function() {
-        let toggle = document.querySelector('.toggle');
-        let navigation = document.querySelector('.navigation');
-        let mains = document.querySelector('.mains');
-    
-        toggle.onclick = function(){
-            navigation.classList.toggle('active');
-            mains.classList.toggle('active');
-        };
-    });*/
-
-    /*let list = document.querySelectorAll('.navigation li');
-    function activeLink(){
-        list.forEach((item) =>
-        item.classList.remove('hovered'));
-        this.classList.add('hovered');
-    }
-    list.forEach((item) =>
-    item.addEventListener('mouseover', activeLink))*/
-
     return(
         
         <div className="mains">
@@ -74,11 +54,11 @@ export const HomeScreen = (props) => {
                     </li>
                 </ul>
                 <div className="user-picture">
-                    <div className="welcome">Cześć Jan!</div>
-                    <img src="https://media-be.chewy.com/wp-content/uploads/2022/09/27095535/cute-dogs-pembroke-welsh-corgi.jpg"></img>
+                    <div className="welcome">Hello Patrycja!</div>
+                    <img src="https://media-be.chewy.com/wp-content/uploads/2022/09/27095535/cute-dogs-pembroke-welsh-corgi.jpg" onClick={() => navigate('/profile')}></img>
              </div>
              <div className="mode">
-             <span class="icons2"><FaArrowLeft />Change the mode!</span>
+             <span class="icons"><FaArrowLeft />Change the mode!</span>
              </div>
             </div>
             <div className="main-profile">

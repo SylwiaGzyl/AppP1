@@ -7,7 +7,7 @@
   width: 100%;
   margin: 0;
   padding: 0;
-  font-family: 'Times New Roman';
+  font-family:'Franklin Gothic Medium';
 }
 
 .mains{
@@ -75,6 +75,7 @@
   width:100%;
   display:flex;
   text-decoration: none;
+  
 }
 
 .navigation ul li a .icons{
@@ -111,27 +112,28 @@
 
 .mode{
   position: absolute;
-  top:900px;
+  top:870px;
   right:25px;
 }
 
 .user-picture{
   position: absolute;
-  left: 150px;
-  top: 770px;
+  left: 55px;
+  top: 740px;
   transition: 0.5s;
   font-weight: bold;
+  
 }
 
 .welcome{
   position: absolute;
-  left:-100px;
-  top: 40px;
+  left:100px;
+  top: 15px;
 }
 
 img{
-  height:100px;
-  width: 100px;
+  height:80px;
+  width: 80px;
   border-radius: 50%;
 }
 
@@ -160,17 +162,17 @@ img{
 }
 
 #light {
-  background-image: url('https://cdn.corporate.walmart.com/dims4/WMT/f7a8313/2147483647/strip/true/crop/1920x1080+0+0/resize/1200x675!/quality/90/?url=https%3A%2F%2Fcdn.corporate.walmart.com%2F7b%2F66%2F142c151b4cd3a19c13e1ca65f193%2Fbusinessfornature-banner.png');
+  background-image: url('./photos/forest.jpg');
   background-size:cover;
 }
 
 #dark {
-  background-image: url('https://wallpapercave.com/wp/wp2088351.jpg');
+  background-image: url('./photos/stars.jpg');
   background-size:cover;
 }
 
 #light .login-form-container {
-  background-color: white;
+  background-color: #ECFFDC;
   text-shadow: 0.1em 0.1em 0.1em white;
   color: black;
   
@@ -182,7 +184,7 @@ img{
 }
 
 #dark .login-form-container, .register-btn {
-  background-color: black;
+  background-color: #071330;
   text-shadow: 0.1em 0.1em 0.1em black;
   color:white;
 }
@@ -242,12 +244,13 @@ button, .switch-btn {
 
 .switch-mode-btn {
   position: absolute;
-  top:900px;
+  top:860px;
   left: 50px;
   height: 50px;
   width: 50px;
   border-radius: 50%;
   border: solid 3px gray;
+
 }
 
 .popup-content {
