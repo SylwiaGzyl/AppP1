@@ -6,7 +6,7 @@ import { IoIosAirplane } from "react-icons/io";
 import { FaArrowLeft } from "react-icons/fa6";
 import { useNavigate, useLocation } from "react-router-dom";
 
-export const HomeScreen = (props) => {
+export const HomeScreen = () => {
     const navigate = useNavigate();
     const location = useLocation();
 
@@ -53,15 +53,11 @@ export const HomeScreen = (props) => {
                 </ul>
                 <div className="user-picture">
                     <div className="welcome">Hello Patrycja!</div>
-                    <img src="https://media-be.chewy.com/wp-content/uploads/2022/09/27095535/cute-dogs-pembroke-welsh-corgi.jpg" onClick={() => navigate('/profile')} alt="User Profile"></img>
+                    <img src="https://media-be.chewy.com/wp-content/uploads/2022/09/27095535/cute-dogs-pembroke-welsh-corgi.jpg" 
+                    onClick={() => navigate('/profile')} alt="User Profile"></img>
                 </div>
                 <div className="mode">
                     <span className="icons"><FaArrowLeft />Change the mode!</span>
-                </div>
-            </div>
-            <div className="main-profile">
-                <div className="main-section">
-                    <h1> Home </h1>
                 </div>
             </div>
         </div>
