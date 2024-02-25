@@ -1,7 +1,7 @@
 import React from "react";
 import { HomeScreen } from "./HomeScreen.jsx";
 
-export const Profile = (props) => {
+export const Profile = () => {
     return(
         <div className="mains">
             <HomeScreen />

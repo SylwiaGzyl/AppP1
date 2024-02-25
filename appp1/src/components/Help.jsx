@@ -1,7 +1,7 @@
 import React from "react";
 import { HomeScreen } from "./HomeScreen.jsx";
 
-export const Help = (props) => {
+export const Help = () => {
     return(
         <div className="mains">
             <HomeScreen />

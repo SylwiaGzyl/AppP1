@@ -1,7 +1,7 @@
 import React from "react";
 import { HomeScreen } from "./HomeScreen.jsx";
 
-export const Settings = (props) => {
+export const Settings = () => {
     return(
         <div className="mains">
             <HomeScreen />

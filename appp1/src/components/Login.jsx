@@ -1,10 +1,9 @@
 import React, { useState } from "react";
-import { HomeScreen } from "./HomeScreen";
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
 import { useNavigate } from "react-router-dom";
 
-export const Login = (props) => {
+export const Login = () => {
     
     const navigate = useNavigate()
     
