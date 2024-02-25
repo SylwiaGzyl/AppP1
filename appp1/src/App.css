@@ -120,14 +120,14 @@
 /* Bottom - navigation */
 .mode{
   position: absolute;
-  top:870px;
+  bottom: 30px;
   right:25px;
 }
 
 .user-picture{
   position: absolute;
   left: 55px;
-  top: 740px;
+  bottom: 100px;
   transition: 0.5s;
   font-weight: bold;
   
@@ -257,7 +257,7 @@ button, .switch-btn {
 
 .switch-mode-btn {
   position: absolute;
-  bottom: 60px;
+  bottom: 30px;
   left: 50px;
   height: 50px;
   width: 50px;
